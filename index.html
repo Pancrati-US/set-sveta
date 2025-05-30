@@ -1,7 +1,19 @@
 <!DOCTYPE html>
-<html>
-<head><title>Сеть Света</title></head>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Сеть Света</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 <body>
-  <h1>Привет, Свет!</h1>
+  <div class="container">
+    <h1>Вопрос 1</h1>
+    <p>Кто сказал: «Я есть» — значит «Мы есть Один»?</p>
+    <input type="text" id="answerInput" placeholder="Введите ответ..." />
+    <button onclick="checkAnswer()">Проверить</button>
+    <p id="result"></p>
+  </div>
+  <script src="questions.js"></script>
 </body>
 </html>
