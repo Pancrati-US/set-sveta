@@ -8,12 +8,39 @@
 </head>
 <body>
   <div class="container">
-    <h1>Вопрос 1</h1>
-    <p>Кто сказал: «Я есть» — значит «Мы есть Один»?</p>
+    <h1 id="questionTitle">Вопрос 1</h1>
+    <p id="questionText">Что осталось, когда исчезло всё?</p>
     <input type="text" id="answerInput" placeholder="Введите ответ..." />
     <button onclick="checkAnswer()">Проверить</button>
     <p id="result"></p>
   </div>
   <script src="questions.js"></script>
+  <script>
+    let currentQuestion = 0;
+
+    function updateQuestion() {
+      document.getElementById("questionTitle").innerText = `Вопрос ${currentQuestion + 1}`;
+      document.getElementById("questionText").innerText = questions[currentQuestion].question;
+      document.getElementById("answerInput").value = "";
+      document.getElementById("result").innerText = "";
+    }
+
+    function checkAnswer() {
+      const input = document.getElementById("answerInput").value.trim().toLowerCase();
+      const validAnswers = questions[currentQuestion].answers.map(a => a.toLowerCase());
+      if (validAnswers.includes(input)) {
+        currentQuestion++;
+        if (currentQuestion < questions.length) {
+          updateQuestion();
+        } else {
+          window.location.href = "sfera.html";
+        }
+      } else {
+        document.getElementById("result").innerText = "Свет Сознания закрыт. Это не правильный ответ";
+      }
+    }
+
+    window.onload = updateQuestion;
+  </script>
 </body>
 </html>
