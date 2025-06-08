@@ -1,24 +1,76 @@
 
 body {
-  font-family: sans-serif;
-  background: #f2f2f2;
+  background: linear-gradient(135deg, #0b0c10, #1f2833);
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: left;
+}
+
+.content p {
+  margin-bottom: 1.5rem;
+}
+
+.sub-menu {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  margin-top: 2rem;
+  gap: 0.6rem;
+}
+
+.sub-menu a {
+  color: #66fcf1;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.sub-menu a:hover {
+  color: #ffffff;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #c5c6c7;
+}
+
+.main-menu {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
+  padding: 2rem;
+  gap: 1rem;
 }
-.container {
-  background: white;
-  padding: 2em;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-input {
-  padding: 0.5em;
-  margin-top: 1em;
+
+.main-menu a {
+  color: #66fcf1;
+  text-decoration: none;
+  font-weight: 600;
+  background: #1f2833;
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
   width: 100%;
+  max-width: 400px;
+  text-align: center;
+  transition: background 0.3s, transform 0.2s;
 }
-button {
-  margin-top: 1em;
-  padding: 0.5em 1em;
+
+.main-menu a:hover {
+  background: #45a29e;
+  transform: scale(1.02);
 }
